@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../constants/colors.dart';
 
+//You can also use stateful builder instead of stateful widget
 class GradientCheckBox extends StatefulWidget {
   const GradientCheckBox({Key? key}) : super(key: key);
 
@@ -16,7 +17,7 @@ class _GradientCheckBoxState extends State<GradientCheckBox> {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back_ios),
             onPressed: () {
               Navigator.pop(context);
             },
