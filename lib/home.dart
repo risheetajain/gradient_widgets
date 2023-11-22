@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'constants/routes.dart';
-import 'widgets/custom_gradient_checkbox.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -22,11 +21,12 @@ class _HomeState extends State<Home> {
           const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
       itemBuilder: (_, index) {
         return InkWell(
-          onTap: (){
+          onTap: () {
             Navigator.pushNamed(context, routers[index]);
           },
           child: Container(
-            color:Colors.blue,
+            color: Colors.green,
+            height: 100,
             child: Center(
               child: Text(
                 text[index],

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../constants/colors.dart';
-
 //You can also use stateful builder instead of stateful widget
 class GradientCheckBox extends StatefulWidget {
   const GradientCheckBox({Key? key}) : super(key: key);
@@ -23,23 +21,30 @@ class _GradientCheckBoxState extends State<GradientCheckBox> {
             },
           ),
           title: const Text('Gradient CheckBox'),
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.green,
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
+                //Fixed height and width is given so that it won't get change in responsiveness
                 width: 40,
                 height: 40,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
+                alignment: Alignment.center, //Alignment as center
+                decoration: const BoxDecoration(
                   //TODO: you can change here gradient color
-                  gradient: yellowLinearGradient,
-                  borderRadius: const BorderRadius.all(Radius.circular(6)),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color(0xFFF09869),
+                      Color(0xFFC729B2),
+                    ],
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(6)),
                 ),
                 child: InkWell(
                   onTap: () {
+                    //To change the state of isChecked variable
                     setState(() {
                       isChecked = !isChecked;
                     });
@@ -62,7 +67,7 @@ class _GradientCheckBoxState extends State<GradientCheckBox> {
               ),
               Text(
                 'Custom Gradient CheckBox',
-                style: Theme.of(context).textTheme.headline3,
+                style: Theme.of(context).textTheme.displaySmall,
               ),
             ],
           ),
