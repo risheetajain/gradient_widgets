@@ -9,8 +9,8 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-List text = ['Gradient CheckBox'];
-List routers = [checkBox];
+List text = ['Gradient CheckBox','Radio'];
+List routers = [checkBox,radioBox];
 
 class _HomeState extends State<Home> {
   @override

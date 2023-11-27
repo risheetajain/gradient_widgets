@@ -3,6 +3,7 @@ import 'package:gradient_widgets/constants/routes.dart';
 import 'package:gradient_widgets/widgets/custom_gradient_checkbox.dart';
 
 import 'home.dart';
+import 'widgets/custom_gradient_radio_box.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,9 +18,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xFFDEE9F9),
-        textTheme: TextTheme(
-          headline3: TextStyle(
+        scaffoldBackgroundColor: const Color(0xFFDEE9F9),
+        textTheme: const TextTheme(
+          displaySmall: TextStyle(
             color: Colors.black,
             fontSize: 20,
             fontWeight: FontWeight.w600,
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
       initialRoute: home,
       routes: {
         checkBox: (context) => const GradientCheckBox(),
+        radioBox: (context) => const GradientRadioBox(),
         home: (context) => const Home(),
       },
     );
