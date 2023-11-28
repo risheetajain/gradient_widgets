@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_widgets/constants/routes.dart';
 import 'package:gradient_widgets/widgets/custom_gradient_checkbox.dart';
+import 'package:gradient_widgets/widgets/custom_gradient_switch.dart';
 
 import 'home.dart';
 import 'widgets/custom_gradient_radio_box.dart';
@@ -41,6 +42,8 @@ class MyApp extends StatelessWidget {
       routes: {
         checkBox: (context) => const GradientCheckBox(),
         radioBox: (context) => const GradientRadioBox(),
+        switchBox: (context) => const GradientSwitch(),
+        
         home: (context) => const Home(),
       },
     );
