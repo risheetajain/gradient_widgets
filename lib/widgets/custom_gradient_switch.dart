@@ -9,7 +9,7 @@ class GradientSwitch extends StatefulWidget {
 }
 
 class _GradientSwitchState extends State<GradientSwitch> {
-  bool isChecked = false;
+  bool isSwitchOn = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,16 +29,17 @@ class _GradientSwitchState extends State<GradientSwitch> {
             children: [
               GestureDetector(
                 onTap: () {
-                  //To change the state of isChecked variable
+                  //To change the state of isSwitchOn variable
                   setState(() {
-                    isChecked = !isChecked;
+                    isSwitchOn = !isSwitchOn;
                   });
                 },
-                //TODO: Here you can see border of Switch if ischecked is true , else gradient color of Switch
+                //TODO: Here you can see border of Switch if isSwitchOn is true , else gradient color of Switch
                 child: Stack(
                   alignment:
-                      isChecked ? Alignment.centerRight : Alignment.centerLeft,
+                      isSwitchOn ? Alignment.centerRight : Alignment.centerLeft,
                   children: [
+                    //Gradient Container
                     Container(
                       //Fixed height and width is given so that it won't get change in responsiveness
                       width: 70,
@@ -47,7 +48,7 @@ class _GradientSwitchState extends State<GradientSwitch> {
                       decoration: BoxDecoration(
                         //TODO: you can change here gradient color
                         gradient: LinearGradient(
-                          colors: isChecked
+                          colors: isSwitchOn
                               ? [
                                   const Color(0xFFF09869),
                                   const Color(0xFFC729B2),
@@ -58,6 +59,7 @@ class _GradientSwitchState extends State<GradientSwitch> {
                             const BorderRadius.all(Radius.circular(40)),
                       ),
                     ),
+                    //White Ball like Container
                     Container(
                       height: 40,
                       width: 40,

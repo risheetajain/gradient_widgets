@@ -41,7 +41,7 @@ class _GradientRadioBoxState extends State<GradientRadioBox> {
                       ],
                     ),
                     shape: BoxShape.circle),
-                child: InkWell(
+                child: GestureDetector(
                   onTap: () {
                     //To change the state of isChecked variable
                     setState(() {
@@ -54,7 +54,7 @@ class _GradientRadioBoxState extends State<GradientRadioBox> {
                           padding: EdgeInsets.all(8.0),
                           child: CircularProgressIndicator(
                             value: 1,
-                            strokeWidth: 4,
+                            strokeWidth: 5,
                             valueColor:
                                 AlwaysStoppedAnimation<Color>(Colors.white),
                           ),

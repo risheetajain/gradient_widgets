@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-Gradient yellowLinearGradient = const LinearGradient(
-  colors: [
+Gradient yellowLinearGradient = LinearGradient(
+  colors: const [
     Color(0xFFF09869),
     Color(0xFFC729B2),
   ],

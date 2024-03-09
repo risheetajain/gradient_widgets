@@ -32,15 +32,15 @@ class _GradientCheckBoxState extends State<GradientCheckBox> {
                 width: 40,
                 height: 40,
                 alignment: Alignment.center, //Alignment as center
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   //TODO: you can change here gradient color
                   gradient: LinearGradient(
-                    colors: [
+                    colors: const [
                       Color(0xFFF09869),
                       Color(0xFFC729B2),
                     ],
                   ),
-                  borderRadius: BorderRadius.all(Radius.circular(6)),
+                  borderRadius: const BorderRadius.all(Radius.circular(6)),
                 ),
                 child: InkWell(
                   onTap: () {
